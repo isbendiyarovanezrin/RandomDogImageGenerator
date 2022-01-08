@@ -77,6 +77,23 @@ img {
   transform: scale(0.96);
 }
 
+#loadingDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: #85c990;
+}
+
+.loader {
+  width: 10rem;
+  height: 10rem;
+  background: center / contain no-repeat url(../img/loader.gif);
+}
+
 @media screen and (max-width: 700px) {
   html {
     font-size: 8px;
