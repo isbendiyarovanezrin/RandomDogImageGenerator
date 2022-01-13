@@ -1,5 +1,15 @@
 :root {
   --font-family: "Karla", sans-serif;
+  --white-color: #fff;
+  --bg-color: #85c990;
+  --red-color: #ff0000;
+  --green-color: #70fc4f;
+  --lightgreen-color: #85c990;
+  --purple-color: #ff00ffea;
+  --blue-color: #00b9f7;
+  --shadow-color1: #00000025;
+  --shadow-color2: #00000033;
+  --border-color: #06460a23;
 }
 
 * {
@@ -7,6 +17,7 @@
   padding: 0;
   border: 0;
   outline: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -19,7 +30,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #85c990;
+  background-color: var(--bg-color);
 }
 
 .wrapper {
@@ -32,32 +43,33 @@ img {
   max-height: 70vh;
   object-fit: cover;
   user-select: none;
-  border: solid #fff;
+  border: solid var(--white-color);
   border-width: 2rem 1rem;
   border-radius: 0.1rem;
-  box-shadow: 0 1rem 2rem #00000025, 0 0.6rem 0.6rem #00000033;
+  box-shadow: 0 1rem 2rem var(--shadow-color1),
+    0 0.6rem 0.6rem var(--shadow-color2);
 }
 
 #btn {
-  color: #fff;
+  color: var(--white-color);
   cursor: pointer;
   user-select: none;
   border-radius: 4rem;
   margin: 3rem auto;
   padding: 1.4rem 1.9rem;
-  border: 0.1rem solid #06460a23;
+  border: 0.1rem solid var(--border-color);
   font: 2.3rem var(--font-family);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   filter: contrast(110%);
   -webkit-tap-highlight-color: transparent;
   background: linear-gradient(
       90deg,
-      #00b9f7 0%,
-      #ff00ffea 48%,
-      #ff0000 80%,
-      #00b9f7 100%
+      var(--blue-color) 0%,
+      var(--purple-color) 48%,
+      var(--red-color) 80%,
+      var(--blue-color) 100%
     ),
-    #85c990;
+    var(--lightgreen-color);
   animation: slide 2s linear infinite;
   background-blend-mode: luminosity;
 }
@@ -69,7 +81,7 @@ img {
 }
 
 #btn:hover {
-  background-color: #70fc4f;
+  background-color: var(--green-color);
   background-blend-mode: exclusion;
 }
 
@@ -85,7 +97,7 @@ img {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  background-color: #85c990;
+  background-color: var(--bg-color);
 }
 
 .loader {
