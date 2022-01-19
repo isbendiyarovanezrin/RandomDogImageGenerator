@@ -1,7 +1,6 @@
 :root {
   --font-family: "Karla", sans-serif;
   --white-color: #fff;
-  --bg-color: #85c990;
   --red-color: #ff0000;
   --green-color: #70fc4f;
   --lightgreen-color: #85c990;
@@ -30,7 +29,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: var(--bg-color);
+  background-color: var(--lightgreen-color);
 }
 
 .wrapper {
@@ -97,7 +96,7 @@ img {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  background-color: var(--bg-color);
+  background-color: var(--lightgreen-color);
 }
 
 .loader {
