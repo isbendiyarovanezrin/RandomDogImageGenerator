@@ -2,6 +2,7 @@
 
 const btn = document.getElementById("btn");
 const img = document.getElementById("img");
+const sound = document.getElementById("sound");
 
 btn.addEventListener("click", getDogImage);
 
@@ -10,6 +11,8 @@ function getDogImage() {
     .then((response) => response.json())
     .then((data) => {
       img.src = data.message;
+      sound.play();
+      sound.currentTime = 0;
     })
     .catch((error) => {
       console.error("Error:", error);
